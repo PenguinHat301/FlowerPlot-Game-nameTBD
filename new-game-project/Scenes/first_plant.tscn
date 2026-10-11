@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c7qnh83uc8f6b"]
+
+[ext_resource type="Script" uid="uid://bpw26y1yf0liy" path="res://Scripts/first_plant.gd" id="1_p00pv"]
+[ext_resource type="Texture2D" uid="uid://sp0cngg0mbrl" path="res://Assets/Art/First_Plant.png" id="1_vbarj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pn84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vbarj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="FirstPlant" type="Node2D" unique_id=814356090]
+script = ExtResource("1_p00pv")
+
+[node name="FirstPlantSprite" type="AnimatedSprite2D" parent="." unique_id=1591684548]
+sprite_frames = SubResource("SpriteFrames_3pn84")

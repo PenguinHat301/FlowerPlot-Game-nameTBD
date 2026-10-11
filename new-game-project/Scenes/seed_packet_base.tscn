@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://lu15r04r3jhh"]
+
+[ext_resource type="Script" uid="uid://dl3fbq6lyv7jd" path="res://Scripts/seed_packet_base.gd" id="1_72rwj"]
+
+[node name="SeedPacketBase" type="Node2D" unique_id=1308646369]
+script = ExtResource("1_72rwj")
+
+[node name="PacketSprite" type="Sprite2D" parent="." unique_id=1726203231]

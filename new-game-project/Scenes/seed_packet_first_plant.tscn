@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c37iwer580abo"]
+
+[ext_resource type="Texture2D" uid="uid://bgaxt3jsvulec" path="res://Assets/Art/FirstFlower_FlowerPack.png" id="1_csa8t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pn84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_csa8t")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pn84"]
+size = Vector2(10, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ncxp"]
+size = Vector2(5, 5)
+
+[node name="SeedPacket_FirstPlant" type="Node2D" unique_id=619773609]
+
+[node name="PacketSprite" type="AnimatedSprite2D" parent="." unique_id=987590449]
+sprite_frames = SubResource("SpriteFrames_3pn84")
+
+[node name="PacketMouseArea" type="Area2D" parent="." unique_id=245655287]
+
+[node name="PacketMouseShape" type="CollisionShape2D" parent="PacketMouseArea" unique_id=1046495075]
+shape = SubResource("RectangleShape2D_3pn84")
+
+[node name="PlaceArea" type="Area2D" parent="." unique_id=2112522362]
+
+[node name="PlaceAreaShape" type="CollisionShape2D" parent="PlaceArea" unique_id=2109103911]
+shape = SubResource("RectangleShape2D_2ncxp")
+debug_color = Color(0.2622342, 0, 0.078095, 0.41960785)

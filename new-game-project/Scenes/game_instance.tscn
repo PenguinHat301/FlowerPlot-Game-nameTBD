@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://vqvw1efj3vxs"]
+
+[ext_resource type="Script" uid="uid://q4qv4s1hjhe5" path="res://Scripts/game_manager.gd" id="1_ncclm"]
+[ext_resource type="PackedScene" uid="uid://66os8upeugl4" path="res://Scenes/field.tscn" id="2_o1tkn"]
+
+[node name="GameInstance" type="Node2D" unique_id=2036211754]
+
+[node name="GameManager" type="Node" parent="." unique_id=831949883]
+script = ExtResource("1_ncclm")
+
+[node name="GameCamera" type="Camera2D" parent="." unique_id=2008994513]
+zoom = Vector2(2.5, 2.5)
+
+[node name="Field" parent="." unique_id=1858976636 instance=ExtResource("2_o1tkn")]
+position = Vector2(40, -44)

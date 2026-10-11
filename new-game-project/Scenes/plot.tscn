@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ct33enbt5vtdq"]
+
+[ext_resource type="Texture2D" uid="uid://dxd2fjmx27vse" path="res://Assets/Art/Plot_1.png" id="1_f03gw"]
+[ext_resource type="Script" uid="uid://baelutq4ub4m7" path="res://Scripts/plot.gd" id="1_sbat0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbat0"]
+atlas = ExtResource("1_f03gw")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3nkwj"]
+atlas = ExtResource("1_f03gw")
+region = Rect2(17, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a44o3"]
+atlas = ExtResource("1_f03gw")
+region = Rect2(34, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pn84"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbat0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3nkwj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a44o3")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3pn84"]
+size = Vector2(14, 14)
+
+[node name="Plot" type="Node2D" unique_id=1357811380]
+script = ExtResource("1_sbat0")
+
+[node name="PlantMarker" type="Marker2D" parent="." unique_id=318419165]
+position = Vector2(0, 3)
+
+[node name="PlotDirtTextures" type="AnimatedSprite2D" parent="." unique_id=1913703588]
+sprite_frames = SubResource("SpriteFrames_3pn84")
+
+[node name="HoverArea" type="Area2D" parent="." unique_id=1941003441]
+collision_layer = 2
+collision_mask = 2
+
+[node name="HoverzShape" type="CollisionShape2D" parent="HoverArea" unique_id=542169983]
+shape = SubResource("RectangleShape2D_3pn84")
